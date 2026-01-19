@@ -1,0 +1,15 @@
+# Folder node_modules
+node_modules/
+
+# File environment
+.env
+
+# Log files
+*.log
+
+# Folder build
+dist/
+build/
+
+# Cache
+.cache/

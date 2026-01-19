@@ -1,6 +1,31 @@
 import { units } from "@/datax/unit";
 import dynamic from "next/dynamic";
 const Gallery = dynamic(() => import("@/components/Gallery"), { ssr: false });
+<script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "Unit Rumah Cluster Griya Padma",
+      "description":
+        "Unit rumah modern di Cluster Griya Padma Bandung dengan spesifikasi premium dan lokasi strategis.",
+      "image": "https://www.clustergriyapadma.com/unit-image.jpg",
+      "brand": {
+        "@type": "Brand",
+        "name": "Griya Padma"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://www.clustergriyapadma.com/unit",
+        "priceCurrency": "IDR",
+        "price": "500000000",
+        "availability": "https://schema.org/InStock"
+      }
+    })
+  }}
+/>
+
 export async function generateStaticParams() {
   return units.map((unit) => ({
     slug: unit.slug,

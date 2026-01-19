@@ -200,38 +200,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
-          <div>
-            <h2 className="text-4xl font-bold text-brown">
-              Cluster <span className="text-gold">Kayana</span>
-            </h2>
-
-            <p className="mt-6 text-gray-600">
-              Cluster eksklusif dengan private gate, jalan lebar, dan desain
-              arsitektur modern tropis.
-            </p>
-
-            <a
-              href="/unit/kayana-70-72"
-              className="inline-block mt-8 text-gold font-semibold"
-            >
-              Lihat Detail Cluster →
-            </a>
-          </div>
-
-          <div className="relative rounded-3xl overflow-hidden">
-            <Image
-              src="/images/images.jpg"
-              alt="Hunian Elit Premium Bandung"
-              width={800}
-              height={400}
-              className="object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-b from-brown/70 to-gold/30" />
-          </div>
-        </div>
-      </section>
+     
       <TrustBadgeSection />
       <section id="akses" className="py-24 bg-ivory scroll-mt-28">
         <div className="max-w-7xl mx-auto px-6">

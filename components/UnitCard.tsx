@@ -1,6 +1,29 @@
 import Image from "next/image";
-import { FaWhatsapp } from "react-icons/fa";
 import Link from "next/link";
+import { FaWhatsapp } from "react-icons/fa";
+import {
+  FaBed,
+  FaBath,
+  FaCar,
+  FaTree,
+  FaBuilding,
+  FaStore,
+  FaDoorOpen,
+} from "react-icons/fa";
+
+// ===== ICON HELPER =====
+const getSpecIcon = (spec: string) => {
+  const text = spec.toLowerCase();
+
+  if (text.includes("kamar tidur")) return <FaBed />;
+  if (text.includes("kamar mandi")) return <FaBath />;
+  if (text.includes("carport") || text.includes("parkir")) return <FaCar />;
+  if (text.includes("taman")) return <FaTree />;
+  if (text.includes("cluster")) return <FaDoorOpen />;
+  if (text.includes("komersial") || text.includes("ruko")) return <FaStore />;
+
+  return <FaBuilding />; // default
+};
 
 export default function UnitCard({ unit }: any) {
   return (
@@ -22,9 +45,15 @@ export default function UnitCard({ unit }: any) {
           {unit.name}
         </h3>
 
-        <ul className="mt-3 space-y-1 text-sm text-gray-600">
-          {unit.specs.map((spec: string, i: number) => (
-            <li key={i}>• {spec}</li>
+        {/* SPECS */}
+        <ul className="mt-3 space-y-2 text-sm text-gray-600">
+          {unit.specs?.map((spec: string, i: number) => (
+            <li key={i} className="flex items-center gap-2">
+              <span className="text-gold text-sm">
+                {getSpecIcon(spec)}
+              </span>
+              <span>{spec}</span>
+            </li>
           ))}
         </ul>
 
@@ -38,9 +67,13 @@ export default function UnitCard({ unit }: any) {
           </Link>
 
           <a
-            href={`https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20${unit.name}`}
+            href={`https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20unit%20${encodeURIComponent(
+              unit.name
+            )}`}
             className="text-green-500 text-2xl hover:scale-110 transition"
             aria-label="WhatsApp"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <FaWhatsapp />
           </a>

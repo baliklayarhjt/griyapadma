@@ -2,7 +2,6 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsappFloat from "@/components/WhatsappFloat";
-import PopUpPromoDorprize from "@/components/PopUpPromo";
 
 import type { Metadata } from "next";
 
@@ -125,7 +124,6 @@ export default function RootLayout({
         <Navbar />
         <main className="min-h-screen">{children}</main>
         <Footer />
-        <PopUpPromoDorprize />
         <WhatsappFloat />
       </body>
     </html>

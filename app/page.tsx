@@ -4,7 +4,7 @@ import Image from "next/image";
 import dynamic from "next/dynamic";
 import TrustBadgeSection from "@/components/TrustBadgeSection";
 import ContactSection from "@/components/ContactSection";
-import PopUpPromoDorprize from "@/components/PopUpPromo";
+
 
 const TikTokGallery = dynamic(() => import("@/components/TikTokGallery"), {
   ssr: false,
@@ -34,7 +34,6 @@ const TikTokGallery = dynamic(() => import("@/components/TikTokGallery"), {
 export default function Home() {
   return (
     <main className="pt-24">
-        <PopUpPromoDorprize />
       <section className="min-h-screen flex items-center bg-ivory">
         <div className="max-w-7xl mx-auto px-6 w-full grid md:grid-cols-2 gap-12 items-center">
           {/* TEXT */}

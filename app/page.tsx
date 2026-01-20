@@ -38,7 +38,7 @@ const TikTokGallery = dynamic(() => import("@/components/TikTokGallery"), {
 />;
 export default function Home() {
   return (
-    <main className="pt-18">
+    <main className="pt-24">
       <section className="min-h-screen flex items-center bg-ivory">
         <div className="max-w-7xl mx-auto px-6 w-full grid md:grid-cols-2 gap-12 items-center">
           {/* TEXT */}

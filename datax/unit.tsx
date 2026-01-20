@@ -39,6 +39,6 @@ export const units = [
     name: "Ruko Cluster Padma Type 120 / 80",
     image: "/images/ruko2.webp",
     specs: ["Ruko Komersial", "2 Lantai"],
-    gallery: ["/images/download.jpg", "/images/ruko2.webp"],
+    gallery: ["/images/rukoweb.webp", "/images/ruko2.webp"],
   },
 ];

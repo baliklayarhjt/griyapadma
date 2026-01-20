@@ -30,7 +30,7 @@ export default function ContactSection() {
               <div className="flex items-center gap-4">
                 <Phone className="text-gold" />
                 <span className="text-white font-medium">
-                  +62 812-3456-7890
+                  +62 822-4014-8900
                 </span>
               </div>
 
@@ -61,7 +61,7 @@ export default function ContactSection() {
             </p>
 
             <a
-              href="https://wa.me/6281234567890?text=Halo%20saya%20tertarik%20dengan%20perumahan%20elit%20Griya%20Padma"
+              href="https://wa.me/6282240148900?text=Halo%20saya%20tertarik%20dengan%20perumahan%20elit%20Griya%20Padma"
               target="_blank"
               rel="noreferrer"
               className="mt-8 inline-flex items-center justify-center w-full rounded-full bg-gold px-8 py-4 text-white font-semibold hover:opacity-90 transition"

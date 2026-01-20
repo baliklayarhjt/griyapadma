@@ -67,7 +67,7 @@ export default function UnitCard({ unit }: any) {
           </Link>
 
           <a
-            href={`https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20unit%20${encodeURIComponent(
+            href={`https://wa.me/6282240148900?text=Halo,%20saya%20tertarik%20unit%20${encodeURIComponent(
               unit.name
             )}`}
             className="text-green-500 text-2xl hover:scale-110 transition"

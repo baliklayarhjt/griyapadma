@@ -12,6 +12,10 @@ export const metadata: Metadata = {
     default: "Griya Padma | Hunian Premium di Bandung",
     template: "%s | Griya Padma",
   },
+   icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+  },
 
   description:
     "Griya Padma adalah hunian premium modern di Bandung dengan fasilitas lengkap, lokasi strategis, dan sertifikat SHM.",

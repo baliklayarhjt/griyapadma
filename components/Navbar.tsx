@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -15,16 +16,25 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Scroll smooth untuk link hash di halaman homepage
   const handleHashScroll = (hash: string) => {
-    // Jika kita sudah di homepage
     if (pathname === "/") {
       const el = document.getElementById(hash);
       el?.scrollIntoView({ behavior: "smooth" });
     }
-    // Tutup menu mobile
     setOpen(false);
   };
+
+  // ✅ ONE SOURCE OF TRUTH (page + hash)
+  const menuItems = [
+
+    { label: "Tipe Unit", hash: "unit", type: "hash" },
+    { label: "Fasilitas", hash: "fasilitas", type: "hash" },
+    { label: "Akses", hash: "akses", type: "hash" },
+    { label: "Lokasi", hash: "lokasi", type: "hash" },
+    { label: "Galeri", hash: "galeri", type: "hash" },
+    { label: "Kontak", hash: "kontak", type: "hash" },
+        { label: "Tentang Kami", href: "/about", type: "page" },
+  ] as const;
 
   return (
     <header
@@ -32,40 +42,56 @@ export default function Navbar() {
         scrolled ? "bg-white/90 backdrop-blur shadow-sm" : "bg-transparent"
       }`}
     >
-      <nav className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+      <nav className="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 py-4">
         {/* LOGO */}
-        <Link href="/" className="text-xl font-bold text-brown">
-          GRIYA <span className="text-gold">PADMA</span>
-        </Link>
+        <div className="flex items-center gap-2">
+          <Image
+            src="/images/icon.png"
+            alt="Logo Griya Padma"
+            width={36}
+            height={36}
+            priority
+          />
+          <Link href="/" className="text-lg sm:text-xl font-bold text-brown">
+            GRIYA <span className="text-gold">PADMA</span>
+          </Link>
+        </div>
 
         {/* DESKTOP MENU */}
         <div className="hidden md:flex items-center gap-8 text-sm font-medium">
-          {[
-            { label: "Tipe Unit", hash: "unit" },
-            { label: "Fasilitas", hash: "fasilitas" },
-            { label: "Akses", hash: "akses" },
-            { label: "Lokasi", hash: "lokasi" },
-            { label: "Galeri", hash: "galeri" },
-            { label: "Kontak", hash: "kontak" },
-          ].map((item) => (
-            <Link
-              key={item.hash}
-              href={`/#${item.hash}`}
-              className="hover:text-gold"
-              onClick={() => handleHashScroll(item.hash)}
-            >
-              {item.label}
-            </Link>
-          ))}
+          {menuItems.map((item) =>
+            item.type === "page" ? (
+              <Link
+                key={item.label}
+                href={item.href}
+                className={`hover:text-gold ${
+                  pathname === item.href
+                    ? "text-gold font-semibold"
+                    : ""
+                }`}
+              >
+                {item.label}
+              </Link>
+            ) : (
+              <Link
+                key={item.hash}
+                href={`/#${item.hash}`}
+                className="hover:text-gold"
+                onClick={() => handleHashScroll(item.hash)}
+              >
+                {item.label}
+              </Link>
+            )
+          )}
         </div>
 
         {/* DESKTOP CTA */}
-        <a
-          href="https://wa.me/6281234567890"
-          className="hidden md:inline-block px-6 py-2 rounded-full bg-gold text-white text-sm font-semibold hover:opacity-90 transition"
+        <Link
+          href="/promo"
+          className="hidden md:inline-block px-6 py-2 rounded-full bg-gold text-white text-sm font-semibold"
         >
-          Konsultasi
-        </a>
+          🔥 PROMO TANPA UNDIAN
+        </Link>
 
         {/* MOBILE HAMBURGER */}
         <button
@@ -79,29 +105,35 @@ export default function Navbar() {
       {/* MOBILE MENU */}
       {open && (
         <div className="md:hidden bg-white/95 backdrop-blur shadow-lg px-6 py-4 flex flex-col gap-4">
-          {[
-            { label: "Tipe Unit", hash: "unit" },
-            { label: "Fasilitas", hash: "fasilitas" },
-            { label: "Akses", hash: "akses" },
-            { label: "Lokasi", hash: "lokasi" },
-            { label: "Galeri", hash: "galeri" },
-            { label: "Kontak", hash: "kontak" },
-          ].map((item) => (
-            <Link
-              key={item.hash}
-              href={`/#${item.hash}`}
-              className="hover:text-gold"
-              onClick={() => handleHashScroll(item.hash)}
-            >
-              {item.label}
-            </Link>
-          ))}
-          <a
-            href="https://wa.me/6281234567890"
-            className="px-6 py-2 rounded-full bg-gold text-white text-sm font-semibold hover:opacity-90 transition"
+          {menuItems.map((item) =>
+            item.type === "page" ? (
+              <Link
+                key={item.label}
+                href={item.href}
+                className="text-sm"
+                onClick={() => setOpen(false)}
+              >
+                {item.label}
+              </Link>
+            ) : (
+              <Link
+                key={item.hash}
+                href={`/#${item.hash}`}
+                className="text-sm"
+                onClick={() => handleHashScroll(item.hash)}
+              >
+                {item.label}
+              </Link>
+            )
+          )}
+
+          <Link
+            href="/promo"
+            className="mt-2 px-6 py-3 rounded-full bg-gold text-white text-sm font-semibold text-center"
+            onClick={() => setOpen(false)}
           >
-            Konsultasi
-          </a>
+            🔥 PROMO TANPA UNDIAN
+          </Link>
         </div>
       )}
     </header>

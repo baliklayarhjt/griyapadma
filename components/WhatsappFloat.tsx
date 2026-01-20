@@ -19,7 +19,7 @@ export default function WhatsappFloat() {
 
   return (
     <a
-      href="https://wa.me/6281234567890"
+      href="https://wa.me/6282240148900"
       target="_blank"
       aria-label="Chat WhatsApp"
    className="

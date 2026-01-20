@@ -15,29 +15,30 @@ export default function HeroImageSlider() {
   useEffect(() => {
     const timer = setInterval(() => {
       setIndex((prev) => (prev + 1) % images.length);
-    }, 4000); // ganti tiap 4 detik
+    }, 4000);
 
     return () => clearInterval(timer);
   }, []);
 
   return (
-    <div className="relative w-full max-w-md sm:max-w-lg md:max-w-xl rounded-3xl overflow-hidden aspect-[4/3]">
+    <div className="relative w-full rounded-3xl overflow-hidden aspect-[4/3] min-h-[260px] sm:min-h-[320px]">
       {images.map((src, i) => (
         <Image
           key={src}
           src={src}
           alt="Hunian Asri di Pegunungan Bandung"
           fill
-          priority={i === 0} // cuma image pertama
+          priority={i === 0}
           sizes="(max-width: 768px) 100vw, 50vw"
-          className={`object-cover transition-opacity duration-1000 ${
+          className={`object-cover transition-opacity duration-700 ease-in-out ${
             i === index ? "opacity-100" : "opacity-0"
           }`}
+          aria-hidden={i !== index}
         />
       ))}
 
-      {/* overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-brown/60 to-gold/30 pointer-events-none" />
+      {/* overlay ringan (Safari friendly) */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/10 to-transparent pointer-events-none" />
     </div>
   );
 }

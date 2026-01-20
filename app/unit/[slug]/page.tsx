@@ -140,6 +140,43 @@ export default function UnitPage({ params }: { params: { slug: string } }) {
             </a>
           </div>
         </div>
+        {/* PARTNER BANK */}
+        <div className="mt-16 px-4 sm:px-6 lg:px-20">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-brown text-center mb-4">
+            Partner Bank KPR
+          </h2>
+
+          <p className="text-center text-sm sm:text-base md:text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+            Didukung oleh bank nasional terpercaya untuk kemudahan proses KPR
+          </p>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 sm:gap-6 items-center">
+            {[
+              { name: "BTN", logo: "/images/bank/logo-btn.webp" },
+              { name: "Mandiri", logo: "/images/bank/logo-mandiri.webp" },
+              { name: "BRI", logo: "/images/bank/logo-bri.webp" },
+              { name: "BSI", logo: "/images/bank/logo-bsi.webp" },
+              {
+                name: "BTN Syariah",
+                logo: "/images/bank/logo-btn-syariah.webp",
+              },
+              { name: "BJB", logo: "/images/bank/logo-bjb.webp" },
+            ].map((bank) => (
+              <div
+                key={bank.name}
+                className="bg-white rounded-2xl shadow-sm p-4 flex items-center justify-center hover:shadow-md transition"
+              >
+                <Image
+                  src={bank.logo}
+                  alt={`Bank ${bank.name}`}
+                  width={100} // Lebih pas untuk mobile
+                  height={50}
+                  className="object-contain grayscale hover:grayscale-0 transition duration-300"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
     </main>
   );

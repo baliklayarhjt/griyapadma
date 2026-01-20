@@ -46,7 +46,7 @@ export default function Navbar() {
         {/* LOGO */}
         <div className="flex items-center gap-2">
           <Image
-            src="/images/icon.png"
+            src="/images/icon.webp"
             alt="Logo Griya Padma"
             width={36}
             height={36}

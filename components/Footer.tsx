@@ -22,7 +22,7 @@ export default function Footer() {
             <ul className="mt-3 space-y-2 sm:space-y-3 text-xs sm:text-sm text-white/80">
               <li>📞 +62 822-4014-8900</li>
               <li>✉️ marketing@griyapadma.com</li>
-              <li>📍 Bandung, Jawa Barat</li>
+              <li>📍 Griya Padma,jalan prima raya Malaka Sari,kecamatan Baleendah, Bandung selatan, Kabupaten Bandung, Jawa Barat 40375</li>
               <li>
                 <a
                   href="https://www.instagram.com/gpa_theluxurybandung?igsh=YnFmMzBzc2F1MmU4"

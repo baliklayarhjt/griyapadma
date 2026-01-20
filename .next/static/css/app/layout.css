@@ -605,6 +605,9 @@ video {
 .mt-8 {
   margin-top: 2rem;
 }
+.mt-1 {
+  margin-top: 0.25rem;
+}
 .block {
   display: block;
 }
@@ -790,6 +793,12 @@ video {
 }
 .overflow-x-auto {
   overflow-x: auto;
+}
+.overflow-x-hidden {
+  overflow-x: hidden;
+}
+.scroll-smooth {
+  scroll-behavior: smooth;
 }
 .whitespace-pre-line {
   white-space: pre-line;
@@ -1378,6 +1387,10 @@ html {
 
   .sm\:h-96 {
     height: 24rem;
+  }
+
+  .sm\:h-80 {
+    height: 20rem;
   }
 
   .sm\:min-h-\[320px\] {

@@ -5,8 +5,8 @@ import { Phone, Mail, MapPin } from "lucide-react";
 export default function ContactSection() {
   return (
     <section
-      id="contact"
-      className="py-24 bg-brown scroll-mt-28"
+      id="kontak"
+      className="py-24 bg-brown scroll-mt-24"
     >
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">

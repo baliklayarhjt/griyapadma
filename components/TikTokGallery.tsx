@@ -12,7 +12,7 @@ export default function TikTokGallery() {
   }, []);
 
   return (
-    <section id="gallery" className="py-24 bg-ivory scroll-mt-28">
+    <section id="galeri" className="py-24 bg-ivory scroll-mt-24">
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto">

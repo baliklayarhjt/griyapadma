@@ -137,7 +137,7 @@ export default function PromoPage() {
               Klaim Promo Sekarang
             </a>
 
-            <p className="text-[11px] sm:text-xs text-gray-400 mt-4">
+            <p className="text-[11px] sm:text-xs text-gray-400 mt-4 mb-5">
               *Syarat & ketentuan berlaku. Promo tidak dapat digabungkan.
             </p>
           </motion.div>

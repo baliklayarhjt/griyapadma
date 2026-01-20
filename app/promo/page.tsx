@@ -44,7 +44,7 @@ export default function PromoPage() {
               className="w-64 sm:w-72 md:w-80"
             >
               <Image
-                src="/images/nmax.jpg"
+                src="/images/nmax.webp"
                 alt="Bonus Motor Yamaha NMAX"
                 width={400}
                 height={250}
@@ -66,7 +66,7 @@ export default function PromoPage() {
               className="w-64 sm:w-72 md:w-96"
             >
               <Image
-                src="/images/brio.jpg"
+                src="/images/brio.webp"
                 alt="Bonus Mobil Honda Brio"
                 width={450}
                 height={250}

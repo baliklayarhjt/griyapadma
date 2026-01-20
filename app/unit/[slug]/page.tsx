@@ -152,7 +152,7 @@ export default function UnitPage({ params }: { params: { slug: string } }) {
 
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 sm:gap-6 items-center">
             {[
-              { name: "BTN", logo: "/images/bank/logo-btn.webp" },
+              { name: "BTN", logo: "/images/bank/logo-BTN.webp" },
               { name: "Mandiri", logo: "/images/bank/logo-mandiri.webp" },
               { name: "BRI", logo: "/images/bank/logo-bri.webp" },
               { name: "BSI", logo: "/images/bank/logo-bsi.webp" },

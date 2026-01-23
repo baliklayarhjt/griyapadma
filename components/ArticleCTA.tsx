@@ -13,6 +13,7 @@ export default function ArticleCTA() {
       </p>
 
       <div className="flex flex-col sm:flex-row justify-center gap-4">
+        {/* Internal link biasa (buka di same tab) */}
         <Link
           href="/promo"
           className="px-6 py-3 rounded-full bg-gold text-white font-semibold text-sm text-center hover:opacity-90 transition"
@@ -20,12 +21,15 @@ export default function ArticleCTA() {
           🔥 Lihat Promo
         </Link>
 
-        <Link
+        {/* External link → buka new tab */}
+        <a
           href="https://wa.me/6282240148900"
+          target="_blank"
+          rel="noopener noreferrer"
           className="px-6 py-3 rounded-full border border-gold text-gold font-semibold text-sm text-center hover:bg-gold hover:text-white transition"
         >
           Konsultasi WhatsApp
-        </Link>
+        </a>
       </div>
     </div>
   );

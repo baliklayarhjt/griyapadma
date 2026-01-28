@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.clustergriyapadma.com"),
 
   title: {
-    default: "Griya Padma | Hunian Premium di Bandung",
+    default: "Cluster Griya Padma | Hunian Premium di Bandung",
     template: "%s | Griya Padma",
   },
 
@@ -17,19 +17,50 @@ export const metadata: Metadata = {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
   },
-   verification: {
+  verification: {
     google: "google46746bacbd82cc84",
   },
 
   description:
-    "Griya Padma adalah hunian premium modern di Bandung dengan fasilitas lengkap, lokasi strategis, dan sertifikat SHM.",
+    "GPA The Luxury – Cluster Griya Padma adalah hunian premium modern di Bandung dengan desain elegan, fasilitas lengkap, dan lingkungan eksklusif. Berlokasi strategis dengan akses mudah ke pusat kota serta didukung sertifikat SHM, menjadikannya pilihan ideal untuk hunian dan investasi.",
 
   keywords: [
+    // brand
     "griya padma",
+    "gpa the luxury",
+    "cluster griya padma",
+
+    // lokasi utama
+    "rumah bandung selatan",
+    "perumahan bandung selatan",
+    "hunian bandung selatan",
+    "cluster rumah bandung selatan",
+
+    // properti umum
     "hunian rumah bandung",
     "perumahan bandung",
     "cluster rumah bandung",
+    "rumah dijual bandung",
+    "rumah baru bandung",
+
+    // premium & value
     "rumah premium bandung",
+    "rumah premium bandung selatan",
+    "perumahan premium bandung",
+    "rumah mewah bandung harga terjangkau",
+    "rumah premium murah bandung",
+
+    // promo & marketing
+    "rumah bandung berhadiah",
+    "promo rumah bandung",
+    "rumah baru bandung berhadiah",
+    "perumahan bandung promo",
+    "rumah bandung harga promo",
+
+    // target market
+    "rumah untuk keluarga di bandung",
+    "investasi rumah bandung",
+    "rumah siap huni bandung",
   ],
 
   alternates: {
@@ -37,17 +68,18 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "Griya Padma | Hunian Premium di Bandung",
+    title:
+      "GPA The Luxury – Cluster Griya Padma | Hunian Premium di Bandung Selatan",
     description:
-      "Hunian premium modern di Bandung. Lihat tipe unit, fasilitas, galeri, dan lokasi Griya Padma.",
+      "GPA The Luxury – Cluster Griya Padma menghadirkan hunian premium modern di Bandung Selatan dengan desain elegan, fasilitas lengkap, lokasi strategis, dan sertifikat SHM. Ideal untuk hunian keluarga dan investasi.",
     url: "https://www.clustergriyapadma.com",
-    siteName: "Griya Padma",
+    siteName: "GPA The Luxury – Griya Padma",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/house-3.webp",
         width: 1200,
         height: 630,
-        alt: "Griya Padma Bandung",
+        alt: "GPA The Luxury – Cluster Griya Padma Bandung Selatan",
       },
     ],
     locale: "id_ID",
@@ -56,10 +88,10 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Griya Padma | Hunian Premium di Bandung",
+    title: "GPA The Luxury – Hunian Premium di Bandung Selatan",
     description:
-      "Hunian premium modern di Bandung dengan fasilitas lengkap dan lokasi strategis.",
-    images: ["/og-image.jpg"],
+      "Hunian premium modern di Bandung Selatan dengan fasilitas lengkap, lokasi strategis, sertifikat SHM, dan promo menarik.",
+    images: ["/house-3.webp"],
   },
 };
 
@@ -84,9 +116,7 @@ export default function RootLayout({
               description:
                 "Cluster Griya Padma adalah hunian rumah premium di Bandung dengan desain modern, lokasi strategis, fasilitas lengkap, dan sertifikat SHM.",
               url: "https://www.clustergriyapadma.com/",
-              image: [
-                "https://www.clustergriyapadma.com/og-image.jpg",
-              ],
+              image: ["https://www.clustergriyapadma.com/house-3.webp"],
               address: {
                 "@type": "PostalAddress",
                 addressLocality: "Bandung",
@@ -106,11 +136,31 @@ export default function RootLayout({
                 unitCode: "MTK",
               },
               amenityFeature: [
-                { "@type": "LocationFeatureSpecification", name: "One Gate System", value: true },
-                { "@type": "LocationFeatureSpecification", name: "Keamanan 24 Jam", value: true },
-                { "@type": "LocationFeatureSpecification", name: "CCTV", value: true },
-                { "@type": "LocationFeatureSpecification", name: "Area Hijau", value: true },
-                { "@type": "LocationFeatureSpecification", name: "Jalan Lebar", value: true },
+                {
+                  "@type": "LocationFeatureSpecification",
+                  name: "One Gate System",
+                  value: true,
+                },
+                {
+                  "@type": "LocationFeatureSpecification",
+                  name: "Keamanan 24 Jam",
+                  value: true,
+                },
+                {
+                  "@type": "LocationFeatureSpecification",
+                  name: "CCTV",
+                  value: true,
+                },
+                {
+                  "@type": "LocationFeatureSpecification",
+                  name: "Area Hijau",
+                  value: true,
+                },
+                {
+                  "@type": "LocationFeatureSpecification",
+                  name: "Jalan Lebar",
+                  value: true,
+                },
               ],
               offers: {
                 "@type": "AggregateOffer",

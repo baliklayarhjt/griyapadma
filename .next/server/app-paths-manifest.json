@@ -1,11 +1,11 @@
 {
   "/_not-found": "app/_not-found.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/page": "app/page.js",
   "/robots.txt/route": "app/robots.txt/route.js",
   "/sitemap.xml/route": "app/sitemap.xml/route.js",
   "/promo/page": "app/promo/page.js",
-  "/page": "app/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/artikel/[slug]/page": "app/artikel/[slug]/page.js",
   "/unit/[slug]/page": "app/unit/[slug]/page.js",
+  "/artikel/[slug]/page": "app/artikel/[slug]/page.js",
   "/about/page": "app/about/page.js"
 }

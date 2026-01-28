@@ -11,19 +11,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1.0,
     },
     {
-      url: `${baseUrl}/unit`,
+      url: `${baseUrl}/unit/type-40-60`,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/tentang-griya-padma`,
+      url: `${baseUrl}/artikel/hunian-nyaman-bandung`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/hunian-rumah-bandung`,
+      url: `${baseUrl}/about`,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.9,

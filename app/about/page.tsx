@@ -155,20 +155,17 @@ export default function AboutPage() {
         bg-black
       "
     >
-      <video
-        className="
-          w-full
-          h-full
-          object-contain
-        "
-        src="/videos/griya-padma.mp4"
-        poster="/images/pkj.webp"
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="metadata"
-      />
+    <video
+  className="w-full h-full object-contain"
+  src="/videos/griya-padma.mp4"
+  poster="/images/pkj.webp"
+  autoPlay
+  muted
+  loop
+  playsInline
+  preload="metadata"
+  controls
+/>
     </div>
   </div>
 </section>

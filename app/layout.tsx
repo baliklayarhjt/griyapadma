@@ -17,6 +17,9 @@ export const metadata: Metadata = {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
   },
+   verification: {
+    google: "google46746bacbd82cc84",
+  },
 
   description:
     "Griya Padma adalah hunian premium modern di Bandung dengan fasilitas lengkap, lokasi strategis, dan sertifikat SHM.",

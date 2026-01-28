@@ -1,11 +1,36 @@
 import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
-
 export const metadata = {
   title: "Tentang Kami | PT Kramat Jaya Cipta Perdana",
   description:
     "Profil resmi PT Kramat Jaya Cipta Perdana, developer perumahan terpercaya di Bandung. Pengembang GPA – The Luxury Cluster Griya Padma.",
+  keywords: [
+    "PT Kramat Jaya Cipta Perdana",
+    "developer perumahan bandung",
+    "developer griya padma",
+    "pengembang cluster bandung",
+  ],
+  alternates: {
+    canonical: "/about",
+  },
+  openGraph: {
+    title: "Tentang Kami | PT Kramat Jaya Cipta Perdana",
+    description:
+      "Developer perumahan terpercaya di Bandung. Pengembang resmi GPA – The Luxury Cluster Griya Padma.",
+    url: "https://www.clustergriyapadma.com/about",
+    siteName: "Griya Padma",
+    images: [
+      {
+        url: "https://www.clustergriyapadma.com/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "PT Kramat Jaya Cipta Perdana",
+      },
+    ],
+    locale: "id_ID",
+    type: "article",
+  },
 };
 
 export default function AboutPage() {
@@ -33,9 +58,7 @@ export default function AboutPage() {
               "@type": "Person",
               name: "Haji Iwan Komara",
             },
-            sameAs: [
-              "https://www.instagram.com/gpa_theluxurybandung",
-            ],
+            sameAs: ["https://www.instagram.com/gpa_theluxurybandung"],
           }),
         }}
       />
@@ -43,7 +66,6 @@ export default function AboutPage() {
       {/* HERO ABOUT */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 mb-16">
         <div className="grid lg:grid-cols-2 gap-10 items-center">
-          
           <div>
             <span className="inline-block mb-4 px-4 py-1 rounded-full bg-gold/10 text-gold text-xs font-semibold">
               Tentang Perusahaan
@@ -83,14 +105,12 @@ export default function AboutPage() {
               priority
             />
           </div>
-
         </div>
       </section>
 
       {/* VISI MISI */}
       <section className="bg-gray-50 py-14">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 grid md:grid-cols-2 gap-8">
-          
           <div className="bg-white p-8 rounded-3xl shadow-sm">
             <h2 className="text-xl font-bold text-brown mb-3">Visi</h2>
             <p className="text-gray-600 leading-relaxed">
@@ -109,14 +129,53 @@ export default function AboutPage() {
               <li>✔ Menciptakan nilai investasi jangka panjang</li>
             </ul>
           </div>
-
         </div>
       </section>
+    {/* VIDEO COMPANY PROFILE */}
+<section className="max-w-6xl mx-auto px-4 sm:px-6 mb-20">
+  <div className="text-center mb-8 sm:mb-10">
+    <h2 className="text-2xl sm:text-3xl font-bold text-brown mb-3">
+      Video Proyek Griya Padma
+    </h2>
+    <p className="text-gray-600 text-sm sm:text-base">
+      Dokumentasi resmi proyek GPA – The Luxury Cluster Griya Padma
+    </p>
+  </div>
+
+  <div className="flex justify-center">
+    <div
+      className="
+        relative
+        w-full
+        max-w-4xl
+        aspect-video
+        rounded-3xl
+        overflow-hidden
+        shadow-lg
+        bg-black
+      "
+    >
+      <video
+        className="
+          w-full
+          h-full
+          object-contain
+        "
+        src="/videos/griya-padma.mp4"
+        poster="/images/pkj.webp"
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="metadata"
+      />
+    </div>
+  </div>
+</section>
 
       {/* OWNER / DIRECT CONTACT */}
       <section className="py-16">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 text-center">
-          
           <h2 className="text-2xl sm:text-3xl font-bold text-brown mb-4">
             Kontak Langsung Developer
           </h2>
@@ -141,7 +200,6 @@ export default function AboutPage() {
               WhatsApp Langsung
             </a>
           </div>
-
         </div>
       </section>
     </main>

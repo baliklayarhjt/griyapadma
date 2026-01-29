@@ -53,7 +53,7 @@ export default function Navbar() {
             priority
           />
           <Link href="/" className="text-lg sm:text-xl font-bold text-brown">
-            GRIYA <span className="text-gold">PADMA</span>
+           CLUSTER  GRIYA <span className="text-gold">PADMA</span>
           </Link>
         </div>
 

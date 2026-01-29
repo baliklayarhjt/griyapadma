@@ -13,9 +13,12 @@ export const metadata: Metadata = {
     template: "%s | Griya Padma",
   },
 
-  icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
+   icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "48x48", type: "image/x-icon" },
+      { url: "/android-chrome-192x192.png", sizes: "192x192", type: "image/png" },
+    ],
+    apple: "/apple-touch-icon.png",
   },
   verification: {
     google: "google46746bacbd82cc84",
